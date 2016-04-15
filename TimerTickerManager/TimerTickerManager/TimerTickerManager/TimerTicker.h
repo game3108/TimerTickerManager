@@ -11,7 +11,7 @@
 
 @protocol TimerTickerDelegate <NSObject>
 - (void) onTimerStop;
-- (void) onTimerTicker:(NSInteger) ticker;
+- (void) onTimerTicker:(CGFloat) ticker;
 @end
 
 @interface TimerTicker : NSObject
