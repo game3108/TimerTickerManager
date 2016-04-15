@@ -16,6 +16,7 @@
 		AF4AE3081CC0B67600387E66 /* TimerTickerManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4AE3071CC0B67600387E66 /* TimerTickerManagerTests.m */; };
 		AF4AE3131CC0B67600387E66 /* TimerTickerManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4AE3121CC0B67600387E66 /* TimerTickerManagerUITests.m */; };
 		AF4AE3291CC0EC5400387E66 /* TimerTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4AE3281CC0EC5400387E66 /* TimerTicker.m */; };
+		AF68E4BC1CC15BA5001A3D7E /* TimerTickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF68E4BB1CC15BA5001A3D7E /* TimerTickerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		AF4AE3141CC0B67600387E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF4AE3271CC0EC5400387E66 /* TimerTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerTicker.h; sourceTree = "<group>"; };
 		AF4AE3281CC0EC5400387E66 /* TimerTicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerTicker.m; sourceTree = "<group>"; };
+		AF68E4BA1CC15BA5001A3D7E /* TimerTickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerTickerManager.h; sourceTree = "<group>"; };
+		AF68E4BB1CC15BA5001A3D7E /* TimerTickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerTickerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 			children = (
 				AF4AE3271CC0EC5400387E66 /* TimerTicker.h */,
 				AF4AE3281CC0EC5400387E66 /* TimerTicker.m */,
+				AF68E4BA1CC15BA5001A3D7E /* TimerTickerManager.h */,
+				AF68E4BB1CC15BA5001A3D7E /* TimerTickerManager.m */,
 			);
 			path = TimerTickerManager;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF68E4BC1CC15BA5001A3D7E /* TimerTickerManager.m in Sources */,
 				AF4AE2F51CC0B67400387E66 /* ViewController.m in Sources */,
 				AF4AE2F21CC0B67400387E66 /* AppDelegate.m in Sources */,
 				AF4AE2EF1CC0B67400387E66 /* main.m in Sources */,
