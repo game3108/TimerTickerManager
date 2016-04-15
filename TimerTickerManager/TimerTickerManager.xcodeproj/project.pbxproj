@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF4AE2EF1CC0B67400387E66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4AE2EE1CC0B67400387E66 /* main.m */; };
+		AF4AE2F21CC0B67400387E66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4AE2F11CC0B67400387E66 /* AppDelegate.m */; };
+		AF4AE2F51CC0B67400387E66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4AE2F41CC0B67400387E66 /* ViewController.m */; };
+		AF4AE2F81CC0B67400387E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4AE2F61CC0B67400387E66 /* Main.storyboard */; };
+		AF4AE2FA1CC0B67400387E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4AE2F91CC0B67400387E66 /* Assets.xcassets */; };
+		AF4AE2FD1CC0B67400387E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4AE2FB1CC0B67400387E66 /* LaunchScreen.storyboard */; };
+		AF4AE3081CC0B67600387E66 /* TimerTickerManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4AE3071CC0B67600387E66 /* TimerTickerManagerTests.m */; };
+		AF4AE3131CC0B67600387E66 /* TimerTickerManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4AE3121CC0B67600387E66 /* TimerTickerManagerUITests.m */; };
+		AF4AE3291CC0EC5400387E66 /* TimerTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4AE3281CC0EC5400387E66 /* TimerTicker.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF4AE3041CC0B67600387E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF4AE2E21CC0B67200387E66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF4AE2E91CC0B67200387E66;
+			remoteInfo = TimerTickerManager;
+		};
+		AF4AE30F1CC0B67600387E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF4AE2E21CC0B67200387E66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF4AE2E91CC0B67200387E66;
+			remoteInfo = TimerTickerManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF4AE2EA1CC0B67200387E66 /* TimerTickerManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerTickerManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF4AE2EE1CC0B67400387E66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF4AE2F01CC0B67400387E66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AF4AE2F11CC0B67400387E66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF4AE2F31CC0B67400387E66 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AF4AE2F41CC0B67400387E66 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AF4AE2F71CC0B67400387E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF4AE2F91CC0B67400387E66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF4AE2FC1CC0B67400387E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF4AE2FE1CC0B67400387E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF4AE3031CC0B67600387E66 /* TimerTickerManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerTickerManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF4AE3071CC0B67600387E66 /* TimerTickerManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerTickerManagerTests.m; sourceTree = "<group>"; };
+		AF4AE3091CC0B67600387E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF4AE30E1CC0B67600387E66 /* TimerTickerManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerTickerManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF4AE3121CC0B67600387E66 /* TimerTickerManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerTickerManagerUITests.m; sourceTree = "<group>"; };
+		AF4AE3141CC0B67600387E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF4AE3271CC0EC5400387E66 /* TimerTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerTicker.h; sourceTree = "<group>"; };
+		AF4AE3281CC0EC5400387E66 /* TimerTicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerTicker.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF4AE2E71CC0B67200387E66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF4AE3001CC0B67600387E66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF4AE30B1CC0B67600387E66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF4AE2E11CC0B67200387E66 = {
+			isa = PBXGroup;
+			children = (
+				AF4AE2EC1CC0B67400387E66 /* TimerTickerManager */,
+				AF4AE3061CC0B67600387E66 /* TimerTickerManagerTests */,
+				AF4AE3111CC0B67600387E66 /* TimerTickerManagerUITests */,
+				AF4AE2EB1CC0B67200387E66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF4AE2EB1CC0B67200387E66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF4AE2EA1CC0B67200387E66 /* TimerTickerManager.app */,
+				AF4AE3031CC0B67600387E66 /* TimerTickerManagerTests.xctest */,
+				AF4AE30E1CC0B67600387E66 /* TimerTickerManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF4AE2EC1CC0B67400387E66 /* TimerTickerManager */ = {
+			isa = PBXGroup;
+			children = (
+				AF4AE3201CC0B6B900387E66 /* TimerTickerManager */,
+				AF4AE2F01CC0B67400387E66 /* AppDelegate.h */,
+				AF4AE2F11CC0B67400387E66 /* AppDelegate.m */,
+				AF4AE2F31CC0B67400387E66 /* ViewController.h */,
+				AF4AE2F41CC0B67400387E66 /* ViewController.m */,
+				AF4AE2F61CC0B67400387E66 /* Main.storyboard */,
+				AF4AE2F91CC0B67400387E66 /* Assets.xcassets */,
+				AF4AE2FB1CC0B67400387E66 /* LaunchScreen.storyboard */,
+				AF4AE2FE1CC0B67400387E66 /* Info.plist */,
+				AF4AE2ED1CC0B67400387E66 /* Supporting Files */,
+			);
+			path = TimerTickerManager;
+			sourceTree = "<group>";
+		};
+		AF4AE2ED1CC0B67400387E66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF4AE2EE1CC0B67400387E66 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF4AE3061CC0B67600387E66 /* TimerTickerManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF4AE3071CC0B67600387E66 /* TimerTickerManagerTests.m */,
+				AF4AE3091CC0B67600387E66 /* Info.plist */,
+			);
+			path = TimerTickerManagerTests;
+			sourceTree = "<group>";
+		};
+		AF4AE3111CC0B67600387E66 /* TimerTickerManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF4AE3121CC0B67600387E66 /* TimerTickerManagerUITests.m */,
+				AF4AE3141CC0B67600387E66 /* Info.plist */,
+			);
+			path = TimerTickerManagerUITests;
+			sourceTree = "<group>";
+		};
+		AF4AE3201CC0B6B900387E66 /* TimerTickerManager */ = {
+			isa = PBXGroup;
+			children = (
+				AF4AE3271CC0EC5400387E66 /* TimerTicker.h */,
+				AF4AE3281CC0EC5400387E66 /* TimerTicker.m */,
+			);
+			path = TimerTickerManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF4AE2E91CC0B67200387E66 /* TimerTickerManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF4AE3171CC0B67600387E66 /* Build configuration list for PBXNativeTarget "TimerTickerManager" */;
+			buildPhases = (
+				AF4AE2E61CC0B67200387E66 /* Sources */,
+				AF4AE2E71CC0B67200387E66 /* Frameworks */,
+				AF4AE2E81CC0B67200387E66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimerTickerManager;
+			productName = TimerTickerManager;
+			productReference = AF4AE2EA1CC0B67200387E66 /* TimerTickerManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF4AE3021CC0B67600387E66 /* TimerTickerManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF4AE31A1CC0B67600387E66 /* Build configuration list for PBXNativeTarget "TimerTickerManagerTests" */;
+			buildPhases = (
+				AF4AE2FF1CC0B67600387E66 /* Sources */,
+				AF4AE3001CC0B67600387E66 /* Frameworks */,
+				AF4AE3011CC0B67600387E66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF4AE3051CC0B67600387E66 /* PBXTargetDependency */,
+			);
+			name = TimerTickerManagerTests;
+			productName = TimerTickerManagerTests;
+			productReference = AF4AE3031CC0B67600387E66 /* TimerTickerManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF4AE30D1CC0B67600387E66 /* TimerTickerManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF4AE31D1CC0B67600387E66 /* Build configuration list for PBXNativeTarget "TimerTickerManagerUITests" */;
+			buildPhases = (
+				AF4AE30A1CC0B67600387E66 /* Sources */,
+				AF4AE30B1CC0B67600387E66 /* Frameworks */,
+				AF4AE30C1CC0B67600387E66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF4AE3101CC0B67600387E66 /* PBXTargetDependency */,
+			);
+			name = TimerTickerManagerUITests;
+			productName = TimerTickerManagerUITests;
+			productReference = AF4AE30E1CC0B67600387E66 /* TimerTickerManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF4AE2E21CC0B67200387E66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = game3108;
+				TargetAttributes = {
+					AF4AE2E91CC0B67200387E66 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2QKL8H8BDR;
+					};
+					AF4AE3021CC0B67600387E66 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2QKL8H8BDR;
+						TestTargetID = AF4AE2E91CC0B67200387E66;
+					};
+					AF4AE30D1CC0B67600387E66 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2QKL8H8BDR;
+						TestTargetID = AF4AE2E91CC0B67200387E66;
+					};
+				};
+			};
+			buildConfigurationList = AF4AE2E51CC0B67200387E66 /* Build configuration list for PBXProject "TimerTickerManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF4AE2E11CC0B67200387E66;
+			productRefGroup = AF4AE2EB1CC0B67200387E66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF4AE2E91CC0B67200387E66 /* TimerTickerManager */,
+				AF4AE3021CC0B67600387E66 /* TimerTickerManagerTests */,
+				AF4AE30D1CC0B67600387E66 /* TimerTickerManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF4AE2E81CC0B67200387E66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF4AE2FD1CC0B67400387E66 /* LaunchScreen.storyboard in Resources */,
+				AF4AE2FA1CC0B67400387E66 /* Assets.xcassets in Resources */,
+				AF4AE2F81CC0B67400387E66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF4AE3011CC0B67600387E66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF4AE30C1CC0B67600387E66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF4AE2E61CC0B67200387E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF4AE2F51CC0B67400387E66 /* ViewController.m in Sources */,
+				AF4AE2F21CC0B67400387E66 /* AppDelegate.m in Sources */,
+				AF4AE2EF1CC0B67400387E66 /* main.m in Sources */,
+				AF4AE3291CC0EC5400387E66 /* TimerTicker.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF4AE2FF1CC0B67600387E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF4AE3081CC0B67600387E66 /* TimerTickerManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF4AE30A1CC0B67600387E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF4AE3131CC0B67600387E66 /* TimerTickerManagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF4AE3051CC0B67600387E66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF4AE2E91CC0B67200387E66 /* TimerTickerManager */;
+			targetProxy = AF4AE3041CC0B67600387E66 /* PBXContainerItemProxy */;
+		};
+		AF4AE3101CC0B67600387E66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF4AE2E91CC0B67200387E66 /* TimerTickerManager */;
+			targetProxy = AF4AE30F1CC0B67600387E66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF4AE2F61CC0B67400387E66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF4AE2F71CC0B67400387E66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF4AE2FB1CC0B67400387E66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF4AE2FC1CC0B67400387E66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF4AE3151CC0B67600387E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF4AE3161CC0B67600387E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF4AE3181CC0B67600387E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = TimerTickerManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = game3108.TimerTickerManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		AF4AE3191CC0B67600387E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = TimerTickerManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = game3108.TimerTickerManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		AF4AE31B1CC0B67600387E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TimerTickerManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = game3108.TimerTickerManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerTickerManager.app/TimerTickerManager";
+			};
+			name = Debug;
+		};
+		AF4AE31C1CC0B67600387E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TimerTickerManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = game3108.TimerTickerManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerTickerManager.app/TimerTickerManager";
+			};
+			name = Release;
+		};
+		AF4AE31E1CC0B67600387E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TimerTickerManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = game3108.TimerTickerManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TimerTickerManager;
+			};
+			name = Debug;
+		};
+		AF4AE31F1CC0B67600387E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TimerTickerManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = game3108.TimerTickerManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TimerTickerManager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF4AE2E51CC0B67200387E66 /* Build configuration list for PBXProject "TimerTickerManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF4AE3151CC0B67600387E66 /* Debug */,
+				AF4AE3161CC0B67600387E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF4AE3171CC0B67600387E66 /* Build configuration list for PBXNativeTarget "TimerTickerManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF4AE3181CC0B67600387E66 /* Debug */,
+				AF4AE3191CC0B67600387E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF4AE31A1CC0B67600387E66 /* Build configuration list for PBXNativeTarget "TimerTickerManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF4AE31B1CC0B67600387E66 /* Debug */,
+				AF4AE31C1CC0B67600387E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF4AE31D1CC0B67600387E66 /* Build configuration list for PBXNativeTarget "TimerTickerManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF4AE31E1CC0B67600387E66 /* Debug */,
+				AF4AE31F1CC0B67600387E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF4AE2E21CC0B67200387E66 /* Project object */;
+}
