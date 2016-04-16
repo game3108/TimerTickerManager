@@ -10,9 +10,9 @@
 
 @interface TimerTicker(){
     dispatch_source_t _timer;
-    BOOL _forceStop;
     CGFloat _startNumber;
     CGFloat _endNumber;
+    BOOL _onFire;
 }
 
 @end
@@ -30,16 +30,15 @@
     return self;
 }
 
-#pragma mark reset endNumber setter
-- (void)setEndNumber:(CGFloat)endNumber{
-    _endNumber = endNumber;
-    _needStop = YES;
-}
-
 
 #pragma mark TimerTicker function
 - (dispatch_source_t)startTimeTicker{
-    _forceStop = NO;
+    if ( _timer ){
+        if ( !_onFire )
+            dispatch_resume(_timer);
+        dispatch_source_cancel(_timer);
+        _timer = nil;
+    }
     CGFloat endNumber   = _endNumber;
     CGFloat startNumber = _startNumber;
     BOOL needStop       = _needStop;
@@ -80,20 +79,39 @@
         }
     });
     dispatch_resume(_timer);
+    _onFire = YES;
     return _timer;
 }
 
-- (void)forceTimeTickerStop{
-    _forceStop = YES;
+- (void)stopTimerTicker{
+    if ( _timer ){
+        if ( !_onFire )
+            dispatch_resume(_timer);
+        dispatch_source_cancel(_timer);
+        _timer = nil;
+    }
+}
+
+- (void)pauseTimerTicker{
+    if ( _timer && _onFire ){
+        dispatch_suspend(_timer);
+        _onFire = NO;
+    }
+}
+
+- (void)resumeTimerTicker{
+    if ( _timer && !_onFire ){
+        dispatch_resume(_timer);
+        _onFire = YES;
+    }
 }
 
 #pragma mark startTimeTicker related function
 
 - (BOOL) judgeStop:(CGFloat)timerTicker andTimeTickerUp:(BOOL)ifUp andNeedStop:(BOOL)needStop{
-    BOOL state1 = _forceStop;
-    BOOL state2 = needStop && ifUp && timerTicker >=0;
-    BOOL state3 = needStop && !ifUp && timerTicker <= 0;
-    return state1 || state2 || state3;
+    BOOL state1 = needStop && ifUp && timerTicker >=0;
+    BOOL state2 = needStop && !ifUp && timerTicker <= 0;
+    return state1 || state2;
 }
 
 - (void)onTimerStop{
@@ -112,10 +130,7 @@
 #pragma mark dealloc
 
 -(void)dealloc{
-    if ( _timer ){
-        dispatch_source_cancel(_timer);
-        _timer = nil;
-    }
+    [self stopTimerTicker];
     NSLog(@"timer ticker dealloc");
 }
 

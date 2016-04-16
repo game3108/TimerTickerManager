@@ -23,4 +23,13 @@
 - (void)startTimerTicker:(id<TimerTickerDelegate>)delegate
                  withKey:(NSString *)key
            withTickerGap:(CGFloat)tickerGap;
+
+- (void) setTimerTickerDelegate:(id<TimerTickerDelegate>) delegate
+                        withKey:(NSString *)key;
+- (void) removeTimerTickerDelegate:(id<TimerTickerDelegate>) delegate
+                           withKey:(NSString *)key;
+- (void) removeTimerTickerWithKey:(NSString *)key;
+- (void) setTimerTickerStop:(NSString *)key;
+- (void) setTimerTickerPause:(NSString *)key;
+- (void) setTimerTickerResume:(NSString *)key;
 @end

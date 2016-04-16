@@ -69,9 +69,63 @@ static TimerTickerManager *instrance = nil;
            withEndNumber:(CGFloat)endNumber
            withTickerGap:(CGFloat)tickerGap
             withNeedStop:(BOOL)needStop{
-    
-    
-    
+    TimerTicker *objcTimerTicker = [_timerTickerDic objectForKey:key];
+    if ( objcTimerTicker ){
+        objcTimerTicker.tickerGap = tickerGap;
+        objcTimerTicker.startNumber = startNumber;
+        objcTimerTicker.endNumber = endNumber;
+        objcTimerTicker.needStop = needStop;
+        objcTimerTicker.delegate = delegate;
+        [objcTimerTicker startTimeTicker];
+        NSLog(@"timeticker reuse ticker");
+    }else{
+        TimerTicker *timerTicker = [[TimerTicker alloc]init];
+        timerTicker.tickerGap = tickerGap;
+        timerTicker.startNumber = startNumber;
+        timerTicker.endNumber = endNumber;
+        timerTicker.needStop = needStop;
+        timerTicker.delegate = delegate;
+        [_timerTickerDic setObject:timerTicker forKey:key];
+        [timerTicker startTimeTicker];
+        NSLog(@"timeticker new ticker");
+    }
+}
+
+- (void) setTimerTickerDelegate:(id<TimerTickerDelegate>) delegate
+                        withKey:(NSString *)key{
+    TimerTicker *objcTimerTicker = [_timerTickerDic objectForKey:key];
+    if ( objcTimerTicker != nil )
+        objcTimerTicker.delegate = delegate;
+}
+
+- (void) removeTimerTickerDelegate:(id<TimerTickerDelegate>) delegate
+                           withKey:(NSString *)key{
+    TimerTicker *objcTimerTicker = [_timerTickerDic objectForKey:key];
+    if ( objcTimerTicker != nil )
+        objcTimerTicker.delegate = nil;
+}
+
+- (void) removeTimerTickerWithKey:(NSString *)key{
+    [_timerTickerDic removeObjectForKey:key];
+}
+
+
+- (void) setTimerTickerStop:(NSString *)key{
+    TimerTicker *objcTimerTicker = [_timerTickerDic objectForKey:key];
+    if ( objcTimerTicker != nil )
+        [objcTimerTicker stopTimerTicker];
+}
+
+- (void) setTimerTickerPause:(NSString *)key{
+    TimerTicker *objcTimerTicker = [_timerTickerDic objectForKey:key];
+    if ( objcTimerTicker != nil )
+        [objcTimerTicker pauseTimerTicker];
+}
+
+- (void) setTimerTickerResume:(NSString *)key{
+    TimerTicker *objcTimerTicker = [_timerTickerDic objectForKey:key];
+    if ( objcTimerTicker != nil )
+        [objcTimerTicker resumeTimerTicker];
 }
 
 

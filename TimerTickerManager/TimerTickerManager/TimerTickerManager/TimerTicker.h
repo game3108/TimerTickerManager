@@ -21,5 +21,7 @@
 @property (nonatomic, assign) BOOL needStop;
 @property (nonatomic, weak) id<TimerTickerDelegate> delegate;
 - (dispatch_source_t)startTimeTicker;
-- (void)forceTimeTickerStop;
+- (void)stopTimerTicker;
+- (void)pauseTimerTicker;
+- (void)resumeTimerTicker;
 @end
