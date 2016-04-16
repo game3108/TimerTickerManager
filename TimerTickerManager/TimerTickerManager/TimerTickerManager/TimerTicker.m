@@ -9,6 +9,7 @@
 #import "TimerTicker.h"
 
 @interface TimerTicker(){
+    dispatch_source_t _timer;
     BOOL _forceStop;
     CGFloat _startNumber;
     CGFloat _endNumber;
@@ -38,14 +39,17 @@
 
 #pragma mark TimerTicker function
 - (dispatch_source_t)startTimeTicker{
+    _forceStop = NO;
     CGFloat endNumber   = _endNumber;
     CGFloat startNumber = _startNumber;
-    CGFloat tickerGap   = _tickerGap;
     BOOL needStop       = _needStop;
-    if (  tickerGap <= 0 ){
-        [_delegate onTimerStop];
-        return nil;
+    CGFloat tickerGap   = _tickerGap;
+    BOOL timerTickerUp  = YES;
+    if ( _tickerGap < 0 ){
+        tickerGap = - _tickerGap;
+        timerTickerUp = NO;
     }
+    
     if ( (endNumber == startNumber) && needStop ){
         [_delegate onTimerStop];
         return nil;
@@ -53,36 +57,30 @@
     if ( !_needStop ){
         endNumber = startNumber;
     }
-    _forceStop = NO;
     __block CGFloat timerTicker = (startNumber - endNumber) / tickerGap;
-    BOOL timeTickerUp = YES;
     if ( timerTicker > 0 ){
-        timeTickerUp = NO;
+        timerTickerUp = NO;
     }
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-    dispatch_source_set_timer(timer, dispatch_walltime(NULL, 0), _tickerGap*NSEC_PER_SEC, _tickerGap*NSEC_PER_SEC*0.1);
+    _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    dispatch_source_set_timer(_timer, dispatch_walltime(NULL, 0), tickerGap*NSEC_PER_SEC, tickerGap*NSEC_PER_SEC*0.1);
     
-    dispatch_source_set_event_handler(timer, ^{
-        BOOL judgeStop = [self judgeStop:timerTicker andTimeTickerUp:timeTickerUp andNeedStop:needStop andForceStop:_forceStop];
+    __weak TimerTicker *weakSelf = self;
+    dispatch_source_set_event_handler(_timer, ^{
+        BOOL judgeStop = [weakSelf judgeStop:timerTicker andTimeTickerUp:timerTickerUp andNeedStop:needStop];
         if(judgeStop) {
-            dispatch_source_cancel(timer);
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                [self onTimerStop];
-            });
+            [weakSelf onTimerStop];
         }else{
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                [self onTimertTicker:timerTicker andTickerGap:tickerGap andEndNumber:endNumber];
-            });
-            if ( timeTickerUp )
+            [weakSelf onTimertTicker:timerTicker andTickerGap:tickerGap andEndNumber:endNumber];
+            if ( timerTickerUp )
                 timerTicker++;
             else
                 timerTicker--;
-            NSLog(@"!!!!!!!!!%f",timerTicker);
+            //NSLog(@"!!!!!!!!!%f",timerTicker);
         }
     });
-    dispatch_resume(timer);
-    return timer;
+    dispatch_resume(_timer);
+    return _timer;
 }
 
 - (void)forceTimeTickerStop{
@@ -91,24 +89,33 @@
 
 #pragma mark startTimeTicker related function
 
-- (BOOL) judgeStop:(CGFloat)timerTicker andTimeTickerUp:(BOOL)ifUp andNeedStop:(BOOL)needStop andForceStop:(BOOL)forceStop{
-    BOOL state1 = forceStop;
+- (BOOL) judgeStop:(CGFloat)timerTicker andTimeTickerUp:(BOOL)ifUp andNeedStop:(BOOL)needStop{
+    BOOL state1 = _forceStop;
     BOOL state2 = needStop && ifUp && timerTicker >=0;
     BOOL state3 = needStop && !ifUp && timerTicker <= 0;
     return state1 || state2 || state3;
 }
 
 - (void)onTimerStop{
-    [_delegate onTimerStop];
+    dispatch_source_cancel(_timer);
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [_delegate onTimerStop];
+    });
 }
 
 - (void)onTimertTicker:(CGFloat)timerTicker andTickerGap:(CGFloat)tickerGap andEndNumber:(CGFloat)endNumber{
-    [_delegate onTimerTicker:timerTicker*tickerGap+endNumber];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [_delegate onTimerTicker:timerTicker*tickerGap+endNumber];
+    });
 }
 
 #pragma mark dealloc
 
 -(void)dealloc{
+    if ( _timer ){
+        dispatch_source_cancel(_timer);
+        _timer = nil;
+    }
     NSLog(@"timer ticker dealloc");
 }
 

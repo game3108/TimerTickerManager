@@ -48,20 +48,19 @@
 
 - (void)onButtonAction{
     _timerTicker = [[TimerTicker alloc]init];
-    _timerTicker.tickerGap = 1.0/3;
-    _timerTicker.startNumber = 10.0f;
-    _timerTicker.endNumber = -5;
+    _timerTicker.tickerGap = -0.2f;
+    _timerTicker.startNumber = -5.0f;
     _timerTicker.delegate = self;
     [_timerTicker startTimeTicker];
     
 }
 
 - (void)onButtonAction2{
-    _timerTicker = [[TimerTicker alloc]init];
-    _timerTicker.tickerGap = 0.2f;
-    _timerTicker.startNumber = -5.0f;
-    _timerTicker.delegate = self;
-    [_timerTicker startTimeTicker];
+    TimerTicker *timerTicker = [[TimerTicker alloc]init];
+    timerTicker.tickerGap = 0.2f;
+    timerTicker.startNumber = -5.0f;
+    timerTicker.delegate = self;
+    [timerTicker startTimeTicker];
     
 }
 

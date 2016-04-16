@@ -11,4 +11,16 @@
 
 @interface TimerTickerManager : NSObject
 + (instancetype) sharedInstrance;
+- (void)startTimerTicker:(id<TimerTickerDelegate>)delegate
+                 withKey:(NSString *)key
+         withStartNumber:(CGFloat)startNumber
+           withEndNumber:(CGFloat)endNumber
+           withTickerGap:(CGFloat)tickerGap;
+- (void)startTimerTicker:(id<TimerTickerDelegate>)delegate
+                 withKey:(NSString *)key
+         withStartNumber:(CGFloat)startNumber
+           withTickerGap:(CGFloat)tickerGap;
+- (void)startTimerTicker:(id<TimerTickerDelegate>)delegate
+                 withKey:(NSString *)key
+           withTickerGap:(CGFloat)tickerGap;
 @end
