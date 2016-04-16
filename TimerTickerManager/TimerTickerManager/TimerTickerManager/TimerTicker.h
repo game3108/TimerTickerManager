@@ -15,10 +15,11 @@
 @end
 
 @interface TimerTicker : NSObject
-@property (nonatomic, assign) CGFloat endTime;
-@property (nonatomic, assign) CGFloat startTime;
+@property (nonatomic, assign) CGFloat endNumber;
+@property (nonatomic, assign) CGFloat startNumber;
 @property (nonatomic, assign) CGFloat tickerGap;
+@property (nonatomic, assign) BOOL needStop;
 @property (nonatomic, weak) id<TimerTickerDelegate> delegate;
-- (dispatch_source_t)timeTickerDown;
-- (dispatch_source_t)timeTickerUp;
+- (dispatch_source_t)startTimeTicker;
+- (void)forceTimeTickerStop;
 @end
