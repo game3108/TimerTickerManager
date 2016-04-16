@@ -32,4 +32,6 @@
 - (void) setTimerTickerStop:(NSString *)key;
 - (void) setTimerTickerPause:(NSString *)key;
 - (void) setTimerTickerResume:(NSString *)key;
+- (BOOL) judgeExistTimerTicker:(NSString *)key;
+- (TimerTickerType)getTimerTickerType:(NSString *)key;
 @end

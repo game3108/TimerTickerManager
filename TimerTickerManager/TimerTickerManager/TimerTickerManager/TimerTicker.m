@@ -10,8 +10,6 @@
 
 @interface TimerTicker(){
     dispatch_source_t _timer;
-    CGFloat _startNumber;
-    CGFloat _endNumber;
     BOOL _onFire;
 }
 
@@ -104,6 +102,15 @@
         dispatch_resume(_timer);
         _onFire = YES;
     }
+}
+
+- (TimerTickerType)getTimerTickerType{
+    if ( !_timer )
+        return TypeStop;
+    else if ( _onFire )
+        return TypeOnFire;
+    else
+        return TypePause;
 }
 
 #pragma mark startTimeTicker related function

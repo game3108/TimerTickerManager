@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger , TimerTickerType){
+    TypeStop = 0,
+    TypeOnFire = 1,
+    TypePause =2,
+    TypeNone = 3
+};
+
 @protocol TimerTickerDelegate <NSObject>
 - (void) onTimerStop;
 - (void) onTimerTicker:(CGFloat) ticker;
@@ -24,4 +31,5 @@
 - (void)stopTimerTicker;
 - (void)pauseTimerTicker;
 - (void)resumeTimerTicker;
+- (TimerTickerType)getTimerTickerType;
 @end

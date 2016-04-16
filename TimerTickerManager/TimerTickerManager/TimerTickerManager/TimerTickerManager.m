@@ -127,6 +127,21 @@ static TimerTickerManager *instrance = nil;
     if ( objcTimerTicker != nil )
         [objcTimerTicker resumeTimerTicker];
 }
+- (BOOL) judgeTimerTickerOnFire:(NSString *)key{
+    
+    return YES;
+}
+- (BOOL) judgeExistTimerTicker:(NSString *)key{
+    return [[_timerTickerDic allKeys] containsObject:key];;
+}
+- (TimerTickerType)getTimerTickerType:(NSString *)key{
+    TimerTicker *objcTimerTicker = [_timerTickerDic objectForKey:key];
+    if ( objcTimerTicker != nil )
+        return [objcTimerTicker getTimerTickerType];
+    else
+        return TypeNone;
+}
+
 
 
 @end
